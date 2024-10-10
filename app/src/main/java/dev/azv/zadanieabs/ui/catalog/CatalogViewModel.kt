@@ -11,11 +11,15 @@ import kotlinx.coroutines.Dispatchers
 class CatalogViewModel (
     private val repository: ProductsRepository = ProductsRepository()
 ): ViewModel() {
-    fun getResponseCallback(callback: FirebaseCallback) = repository.getResponseFromDatabase(callback)
+    fun getResponseCallback(callback: FirebaseCallback) {
+        repository.getResponseFromDatabaseCallback(callback)
+    }
 
-    fun getResponseLiveData(): LiveData<FirebaseResponse> = repository.getResponseFromDatabase()
+    fun getResponseLiveData(): LiveData<FirebaseResponse> {
+        return repository.getResponseFromDatabaseLiveData()
+    }
 
-    val responseLiveData = liveData(Dispatchers.IO) {
+    val responseLiveDataCoroutine = liveData(Dispatchers.IO) {
         emit(repository.getResponseFromDatabaseCoroutine())
     }
 }

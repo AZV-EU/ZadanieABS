@@ -13,7 +13,7 @@ class ProductsRepository (
     private val rootRef: DatabaseReference = FirebaseDatabase.getInstance().reference,
     private val productRef: DatabaseReference = rootRef.child(PRODUCTS_REF)
 ) {
-    fun getResponseFromDatabase(callback: FirebaseCallback) {
+    fun getResponseFromDatabaseCallback(callback: FirebaseCallback) {
         productRef.get().addOnCompleteListener { task ->
             val response = FirebaseResponse()
             if (task.isSuccessful) {
@@ -29,7 +29,7 @@ class ProductsRepository (
         }
     }
 
-    fun getResponseFromDatabase() : MutableLiveData<FirebaseResponse> {
+    fun getResponseFromDatabaseLiveData() : MutableLiveData<FirebaseResponse> {
         val mutableLiveData = MutableLiveData<FirebaseResponse>()
         productRef.get().addOnCompleteListener { task ->
             val response = FirebaseResponse()
