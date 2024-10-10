@@ -1,25 +1,25 @@
-package dev.azv.zadanieabs.domain.products
+package dev.azv.zadanieabs.domain.user
 
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import dev.azv.zadanieabs.data.database.FirebaseCallback
 import dev.azv.zadanieabs.data.database.FirebaseResponse
-import dev.azv.zadanieabs.data.product.Product
+import dev.azv.zadanieabs.data.user.User
 import dev.azv.zadanieabs.common.Globals
 
-class ProductsRepository (
+class UserRepository (
     private val rootRef: DatabaseReference = FirebaseDatabase.getInstance().reference,
-    private val productRef: DatabaseReference = rootRef.child(Globals.PRODUCTS_REF)
+    private val userRef: DatabaseReference = rootRef.child(Globals.USERS_REF)
 ) {
-    fun getAllProducts(callback: FirebaseCallback) {
-        productRef.get().addOnCompleteListener { task ->
+    fun getUser(username: String, callback: FirebaseCallback) {
+        userRef.equalTo(username, "username").get().addOnCompleteListener { task ->
             val response = FirebaseResponse()
             if (task.isSuccessful) {
                 val result = task.result
                 result?.let {
-                    response.products = result.children.map { snapshot ->
-                        snapshot.getValue(Product::class.java)!!
-                    }
+                    print(result.childrenCount)
+                    if (result.childrenCount > 0)
+                        response.user = result.children.map { sp -> sp.getValue(User::class.java) }.first()
                 }
             } else
                 response.exception = task.exception

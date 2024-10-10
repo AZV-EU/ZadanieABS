@@ -1,4 +1,4 @@
-package dev.azv.zadanieabs.data.products
+package dev.azv.zadanieabs.data.product
 
 import android.media.Image
 

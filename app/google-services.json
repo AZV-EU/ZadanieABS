@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "635288812163",
+    "firebase_url": "https://zadanieabs-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "zadanieabs",
+    "storage_bucket": "zadanieabs.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:635288812163:android:31806524b14b2af99039b6",
+        "android_client_info": {
+          "package_name": "dev.azv.zadanieabs"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhhDzGJq4_65D3lceQJe2iJcl6m_2L1xo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

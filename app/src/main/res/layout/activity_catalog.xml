@@ -5,6 +5,6 @@
     android:id="@+id/catalog"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.catalog.CatalogActivity">
+    tools:context=".view.catalog.CatalogActivity">
 
 </androidx.constraintlayout.widget.ConstraintLayout>
