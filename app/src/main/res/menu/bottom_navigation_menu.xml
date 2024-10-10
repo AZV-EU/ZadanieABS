@@ -10,4 +10,8 @@
         android:id="@+id/catalog"
         android:enabled="true"
         android:title="@string/nav_catalog"/>
+    <item
+        android:id="@+id/checkout"
+        android:enabled="true"
+        android:title="@string/nav_checkout"/>
 </menu>

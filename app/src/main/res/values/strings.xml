@@ -4,4 +4,5 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="nav_main">Home</string>
     <string name="nav_catalog">Catalog</string>
+    <string name="nav_checkout">Cart</string>
 </resources>
