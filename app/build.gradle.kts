@@ -36,6 +36,10 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures {
+        viewBinding = true
+        dataBinding = true
+    }
 }
 
 dependencies {
@@ -48,11 +52,21 @@ dependencies {
 
     implementation(libs.dagger.hilt.android)
     implementation(libs.androidx.hilt.work)
+    implementation(libs.androidx.swiperefreshlayout)
+    implementation(libs.androidx.legacy.support.v4)
+    implementation(libs.androidx.lifecycle.livedata.ktx)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.androidx.fragment.ktx)
+    implementation(libs.androidx.viewbinding)
+    implementation(libs.androidx.annotation)
+    implementation(libs.androidx.databinding.runtime)
     kapt(libs.dagger.hilt.android.compiler)
+
+    implementation(libs.androidx.lifecycle.viewmodel.android)
+    implementation(libs.jbcrypt)
 
     implementation("androidx.work:work-runtime-ktx:2.9.1")
 
-    implementation(libs.jbcrypt)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

@@ -6,4 +6,5 @@ import javax.inject.Singleton
 interface SessionManager {
     fun getUser(): User?
     fun setUser(user: User?)
+    val isLoggedIn: Boolean
 }

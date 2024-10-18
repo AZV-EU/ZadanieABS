@@ -1,8 +1,16 @@
 <resources>
     <string name="app_name">Zadanie ABS</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="nav_main">Home</string>
     <string name="nav_catalog">Catalog</string>
     <string name="nav_checkout">Cart</string>
+    <string name="sync_products_error">An error occurred whilst syncing products</string>
+    <!-- Strings related to login -->
+    <string name="prompt_username">Username</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="login_failed_database_error">Failed to login due to an internal error</string>
+    <string name="login_failed_internal_error">Unknown Internal Error</string>
 </resources>

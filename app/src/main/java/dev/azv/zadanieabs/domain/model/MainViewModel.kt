@@ -1,4 +1,4 @@
-package dev.azv.zadanieabs.view.main
+package dev.azv.zadanieabs.domain.model
 
 import androidx.lifecycle.ViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -11,10 +11,4 @@ import javax.inject.Inject
 class MainViewModel @Inject constructor(
     sessionManager: SessionManager
 ) : ViewModel() {
-    private val _isLoggedIn: MutableStateFlow<Boolean> = MutableStateFlow(false)
-    val isLoggedIn: StateFlow<Boolean> = _isLoggedIn
-
-    init {
-        _isLoggedIn.value = sessionManager.getUser() != null
-    }
 }
